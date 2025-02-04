@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --custom-color: #f78065;
+  --subtle-text-color: #5d5c5ca9;
+
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: auto;
+}
+
+/* -------------hero region  */
+.hero {
+  width: 100%;
+}
+
+.hero__image {
+  width: 100%;
+  position: relative;
+}
+
+.hero__textcontent {
+  position: absolute;
+  bottom: -10.5rem;
+  left: 30.2rem;
+  width: 28%;
+  background-color: white;
+  box-shadow: 0 20px 10px rgba(215, 214, 214, 0.749);
+  padding: 2em 7em 3.4em 2.8em;
+}
+
+.hero__headline {
+  font-size: 1.8rem;
+}
+.hero__headline-span {
+  color: var(--custom-color);
+}
+
+.hero__para {
+  text-shadow: 1px 1px 3px rgb(181, 181, 181);
+  color: var(--subtle-text-color);
+  margin-bottom: 1.5em;
+}
+
+.hero__btn {
+  border: none;
+  box-shadow: 0 0 2px rgba(128, 128, 128, 0.383);
+  background-color: var(--custom-color);
+  padding: 1em 4em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.hero__btn-image {
+  width: 1.3em;
+}

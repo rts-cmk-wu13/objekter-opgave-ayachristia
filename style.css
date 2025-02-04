@@ -6,7 +6,7 @@
 
 :root {
   --custom-color: #f78065;
-  --subtle-text-color: #5d5c5ca9;
+  --subtle-text-color: #474646d6;
 
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -17,6 +17,42 @@
   margin: auto;
 }
 
+/* ------------header region  */
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 33rem;
+}
+
+.header__homebtn-icon {
+  color: whitesmoke;
+  transform: scale(1.5);
+}
+
+.header__member-menu {
+  background-color: whitesmoke;
+  border-radius: 42%;
+  padding: 1.1em 1em 1.1em 0.4em;
+  border: none;
+  display: flex;
+  gap: 3px;
+}
+
+.header__member-iconArrow {
+  color: var(--subtle-text-color);
+}
+.header__member-iconPerson {
+  transform: scale(1.3);
+  color: white;
+  background-color: var(--custom-color);
+  border-radius: 50%;
+}
 /* -------------hero region  */
 .hero {
   width: 100%;
@@ -64,4 +100,16 @@
 
 .hero__btn-image {
   width: 1.3em;
+}
+
+/* -----------services region  */
+
+.services {
+  display: flex;
+  margin-top: 20rem;
+}
+
+/* -------facilities region  */
+.facilities__list-container {
+  display: flex;
 }

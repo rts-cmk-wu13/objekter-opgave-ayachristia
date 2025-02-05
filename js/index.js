@@ -211,7 +211,7 @@ advantages.forEach((advantage) => {
   advantageSection.classList.add("advantage");
 
   advantageSection.innerHTML = `
-    <img class="advantage__image" src="${advantage.icon}"></img>
+    <img class="advantage__image-icon" src="${advantage.icon}"></img>
     <h2 class="advantage__headline">${advantage.headline}</h2>
     <p class="advantage__text">${advantage.text}</p>
 
@@ -222,3 +222,52 @@ advantages.forEach((advantage) => {
 advantagesContainerEl.append(advantagesSection);
 
 // ------------footer region
+
+//create top section
+const topFooter = document.createElement("section");
+topFooter.classList.add("footer__top");
+//create first text section
+const footerHighlight = document.createElement("section");
+footerHighlight.classList.add("footer__highlight");
+footerHighlight.innerHTML = `
+<h1 class="footer__highlight-headline">${footer.headline}</h1>
+<p class="footer__highlight-text">${footer.text}</p>
+`;
+topFooter.append(footerHighlight);
+//create section holding the next 3 sections
+const footerSections = document.createElement("section");
+footerSections.classList.add("footer__sections");
+//create foreach on footer.setions
+footer.sections.forEach((section) => {
+  const footerSection = document.createElement("section");
+  footerSection.classList.add("footer__section");
+  footerSection.innerHTML = `
+    <h2 class="footer__section-headline">${section.headline}</h2>
+    <p class="footer__section-text">${section.text1}</p>
+    <p class="footer__section-text">${section.text2}</p>
+    <p class="footer__section-text">${section.text3}</p>
+    `;
+  footerSections.append(footerSection);
+});
+topFooter.append(footerSections);
+footerContainerEl.append(topFooter);
+
+//create bottom section
+const footerBottom = document.createElement("section");
+footerBottom.classList.add("footer__bottom");
+//create para for rights
+const footerRights = document.createElement("p");
+footerRights.classList.add("footer__rights");
+footerRights.textContent = footer.rights;
+//create section to recieve next sections
+const footerNavigation = document.createElement("section");
+footerNavigation.classList.add("footer__navigation");
+//create foreach on footer.navigation sections
+footer.navigation.forEach((navEl) => {
+  const footerNavLink = document.createElement("a");
+  footerNavLink.classList.add("footer__navigation-link");
+  footerNavLink.textContent = navEl;
+  footerNavigation.append(footerNavLink);
+});
+footerBottom.append(footerRights, footerNavigation);
+footerContainerEl.append(footerBottom);

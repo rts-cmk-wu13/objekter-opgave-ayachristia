@@ -12,24 +12,30 @@
 
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+
+  --main--padding: 0 2rem;
 }
 
 .wrapper {
-  width: 1000px;
+  width: 65vw;
   margin: auto;
+  margin-top: 3rem;
 }
-
+main {
+  padding: 0 2rem;
+}
 /* ------------header region  */
 .header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 33rem;
+
+  position: fixed;
+  margin: auto;
+  width: 65%;
+  top: 0;
+  z-index: 1;
+  padding: 4em 4em;
 }
 
 .header__homebtn-icon {
@@ -58,44 +64,46 @@
 /* -------------hero region  */
 .hero {
   width: 100%;
+  position: relative;
 }
 
 .hero__image {
   width: 100%;
-  position: relative;
+  object-fit: cover;
 }
 
 .hero__textcontent {
   position: absolute;
-  bottom: -10.5rem;
-  left: 30.2rem;
-  width: 28%;
+  top: calc(25vh + 4rem);
+  left: 3vw;
+  width: 52%;
   background-color: white;
   box-shadow: 0 20px 10px rgba(215, 214, 214, 0.749);
-  padding: 2em 7em 3.4em 2.8em;
+  padding: 5vh 7vw 7vh 2.8vw;
 }
 
 .hero__headline {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  margin-bottom: 2vh;
 }
 .hero__headline-span {
   color: var(--custom-color);
 }
 
 .hero__para {
-  text-shadow: 1px 1px 3px rgb(181, 181, 181);
+  text-shadow: 0 1px 1px rgb(181, 181, 181);
   color: var(--subtle-text-color);
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 
 .hero__btn {
   border: none;
   box-shadow: 0 0 2px rgba(128, 128, 128, 0.383);
   background-color: var(--custom-color);
-  padding: 1em 4em;
+  padding: 1vh 4vw;
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.5rem;
   color: whitesmoke;
   font-weight: bold;
 }
@@ -111,24 +119,45 @@
   margin-top: 20rem;
   gap: 1.4rem;
   margin-bottom: 10rem;
+  padding: var(--main--padding);
+}
+
+.service {
+  width: 33%;
+}
+
+.service__image {
+  width: 55%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  margin-bottom: 2em;
 }
 
 .service__headline {
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 
 .service__text {
   color: var(--subtle-text-color);
-  text-shadow: 1px 1px 3px rgb(181, 181, 181);
+  text-shadow: 0 1px 1px rgb(181, 181, 181);
+  font-size: 0.8rem;
+  margin-bottom: 2em;
 }
 
 .service__link-text {
   text-decoration: none;
   color: var(--custom-color);
   font-weight: bold;
+  font-size: 0.8rem;
 }
 
 /* -------facilities region  */
+.facilities {
+  padding: var(--main--padding);
+}
+
 .facilities__list-container {
   display: flex;
   justify-content: space-between;
@@ -136,28 +165,30 @@
   margin-bottom: 10rem;
 }
 
+.facilities__headline {
+  font-size: 1.5rem;
+  margin-bottom: 3vh;
+}
+
 .facility__section {
   width: 25%;
 }
 
-.facilities__headline {
-  font-size: 2rem;
-  margin-bottom: 5rem;
-}
-
 .facility__img-icon {
-  margin: 3rem 5rem 3rem 0;
+  height: 1.5rem;
+  margin: 6vh 0;
 }
 
 .facility__headline {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin-bottom: 3vh;
 }
 
 .facility__text {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--subtle-text-color);
-  text-shadow: 1px 1px 3px rgb(181, 181, 181);
-  height: 4rem;
+  text-shadow: 0 1px 1px rgb(181, 181, 181);
+  height: 8vh;
 }
 
 .facility__btn {
@@ -165,12 +196,13 @@
   background: none;
   color: var(--custom-color);
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 /* -------------sites region  */
 .sites {
   display: flex;
   margin-bottom: 10rem;
+  padding: var(--main--padding);
 }
 
 .sites__article {
@@ -179,11 +211,12 @@
 }
 
 .sites__article-headline {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 0 0 0.8rem 0;
 }
 
 .sites__article-text {
+  font-size: 0.8rem;
   color: var(--subtle-text-color);
   text-shadow: 1px 1px 1px rgba(181, 181, 181, 0.812);
   margin-bottom: 2.2rem;
@@ -211,7 +244,7 @@
 }
 
 .sites__place-image {
-  width: 12rem;
+  width: 10vw;
   aspect-ratio: 9/16;
   object-fit: cover;
 }
@@ -221,9 +254,9 @@
 }
 
 .sites__place-text {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--subtle-text-color);
-  text-shadow: 1px 1px 3px rgb(181, 181, 181);
+  text-shadow: 0 1px 1px rgb(181, 181, 181);
   margin-bottom: 0.7rem;
 }
 
@@ -237,25 +270,102 @@
 /* ------------advantages region  */
 .advantages {
   margin-bottom: 10rem;
+  padding: var(--main--padding);
+}
+
+.advantages__headline {
+  font-size: 1.5rem;
+
+  margin-bottom: 2.2em;
 }
 .advantages__section {
   display: flex;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 2rem;
 }
 
-.advantage__image {
-  margin-bottom: 4rem;
+.advantage__image-icon {
+  margin-bottom: 5vh;
+  height: 1.5rem;
 }
 
 .advantage__headline {
-  height: 5rem;
+  font-size: 1rem;
+  height: 5vh;
+  margin-bottom: 2rem;
 }
 
 .advantage__text {
   color: var(--subtle-text-color);
-  font-size: 0.8rem;
-  text-shadow: 1px 1px 3px rgb(181, 181, 181);
+  font-size: 0.7rem;
+  text-shadow: 0 1px 1px rgb(181, 181, 181);
 }
 
 /* -----------footer region  */
+
+.footer {
+  background-color: rgba(232, 232, 228, 0.612);
+  padding: 3rem;
+  margin-bottom: 10rem;
+}
+
+.footer__top {
+  display: flex;
+  padding-bottom: 2em;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.54);
+  margin-bottom: 3vh;
+}
+
+.footer__highlight {
+  width: 15%;
+  margin-right: 13vw;
+}
+
+.footer__highlight-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.footer__sections {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  /* gap: 1em; */
+}
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.footer__section-headline {
+  font-size: 1rem;
+}
+.footer__section-text {
+  color: var(--subtle-text-color);
+  text-shadow: 0 1px 1px rgb(181, 181, 181);
+  font-size: 0.7rem;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__rights {
+  font-size: 0.8rem;
+  color: var(--subtle-text-color);
+  text-shadow: 0 1px 1px rgb(181, 181, 181);
+}
+
+.footer__navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 20vw;
+}
+
+.footer__navigation-link {
+  color: var(--subtle-text-color);
+  text-shadow: 0 1px 1px rgb(181, 181, 181);
+  font-size: 0.7rem;
+}

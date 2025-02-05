@@ -101,3 +101,31 @@ let advantages = [
 ];
 
 // Opret dit dataobjekt til footerens indhold herunder
+let footer = {
+  headline: "Easy Camper",
+  text: "When Passion Meets Comfort",
+  sections: [
+    {
+      headline: "Discover the network",
+      text1: "Where to shop",
+      text2: "Tour guided",
+      text3: "Our Tours",
+      text4: "About Us",
+    },
+    {
+      headline: "Become a Manager",
+      text1: "Join your Pairing",
+      text2: "Offer your Service",
+      text3: "Are you a guide?",
+    },
+    {
+      headline: "Assistance",
+      text1: "Support Center",
+      text2: "FAQs",
+      text3: "Cancallation Options",
+      text4: "Reliability and Security",
+    },
+  ],
+  rights: "EasyCamper. All rights reserved",
+  navigation: ["ABout", "Site Map", "Terms", "Privacy Policy", "Teams"],
+};

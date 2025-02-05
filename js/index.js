@@ -122,7 +122,7 @@ services.forEach((service) => {
 });
 
 // -----------------facilities region
-const facilitiesHeadline = document.createElement("h2");
+const facilitiesHeadline = document.createElement("h1");
 facilitiesHeadline.classList.add("facilities__headline");
 facilitiesHeadline.textContent = facilities.headline;
 facilitiesContainerEl.append(facilitiesHeadline);
@@ -134,7 +134,7 @@ facilitiesListEl.classList.add("facilities__list-container");
 facilities.options.forEach((facility) => {
   //create section for each
   const facilitySection = document.createElement("section");
-  facilitySection.classList.add("facility");
+  facilitySection.classList.add("facility__section");
 
   //create img for icon
   const facilityImage = document.createElement("img");
@@ -147,7 +147,7 @@ facilities.options.forEach((facility) => {
   //create p
   const facilityText = document.createElement("p");
   facilityText.classList.add("facility__text");
-  facility.textContent = facility.text;
+  facilityText.textContent = facility.text;
   //create button
   const facilityBtn = document.createElement("button");
   facilityBtn.classList.add("facility__btn");
@@ -163,3 +163,62 @@ facilities.options.forEach((facility) => {
 });
 
 facilitiesContainerEl.appendChild(facilitiesListEl);
+// -----------------site region
+
+//create article for 1st element
+const sitesArticle = document.createElement("article");
+sitesArticle.classList.add("sites__article");
+//create innerhtml for 1st element
+sitesArticle.innerHTML = `
+<h1 class="sites__article-headline">${sites.headline}</h1>
+<p class="sites__article-text">${sites.text}</p>
+<button class="sites__article-btn">
+<img src="${sites.btnicon}" alt="play icon" class="sites__article-btnicon">
+ Start</button>
+`;
+sitesContainerEl.append(sitesArticle);
+
+//create section for 2nd elements
+const sitesSection = document.createElement("section");
+sitesSection.classList.add("sites__section");
+//create foreach with create section for each element places
+sites.places.forEach((place) => {
+  const placeSection = document.createElement("section");
+  placeSection.classList.add("sites__place");
+  placeSection.innerHTML = `
+    <img class="sites__place-image" src="${place.img}" alt="${place.name}">
+    <h2 class="sites__place-headline">${place.name}</h2>
+    <p class="sites__place-text">${place.city}</p>
+    <button class="sites__place-btn">View the Site</button>
+    `;
+  sitesSection.append(placeSection);
+});
+
+sitesContainerEl.append(sitesSection);
+
+// ----------------advantages region
+
+const advantagesHeadline = document.createElement("h1");
+advantagesHeadline.classList.add("advantages__headline");
+advantagesHeadline.textContent = `Our Advantages`;
+advantagesContainerEl.append(advantagesHeadline);
+
+const advantagesSection = document.createElement("section");
+advantagesSection.classList.add("advantages__section");
+
+advantages.forEach((advantage) => {
+  const advantageSection = document.createElement("section");
+  advantageSection.classList.add("advantage");
+
+  advantageSection.innerHTML = `
+    <img class="advantage__image" src="${advantage.icon}"></img>
+    <h2 class="advantage__headline">${advantage.headline}</h2>
+    <p class="advantage__text">${advantage.text}</p>
+
+    `;
+  advantagesSection.append(advantageSection);
+});
+
+advantagesContainerEl.append(advantagesSection);
+
+// ------------footer region

@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
@@ -107,9 +109,153 @@
 .services {
   display: flex;
   margin-top: 20rem;
+  gap: 1.4rem;
+  margin-bottom: 10rem;
+}
+
+.service__headline {
+  font-size: 1.3rem;
+}
+
+.service__text {
+  color: var(--subtle-text-color);
+  text-shadow: 1px 1px 3px rgb(181, 181, 181);
+}
+
+.service__link-text {
+  text-decoration: none;
+  color: var(--custom-color);
+  font-weight: bold;
 }
 
 /* -------facilities region  */
 .facilities__list-container {
   display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 10rem;
 }
+
+.facility__section {
+  width: 25%;
+}
+
+.facilities__headline {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+.facility__img-icon {
+  margin: 3rem 5rem 3rem 0;
+}
+
+.facility__headline {
+  font-size: 1.2rem;
+}
+
+.facility__text {
+  font-size: 0.8rem;
+  color: var(--subtle-text-color);
+  text-shadow: 1px 1px 3px rgb(181, 181, 181);
+  height: 4rem;
+}
+
+.facility__btn {
+  border: none;
+  background: none;
+  color: var(--custom-color);
+  font-weight: bold;
+  font-size: 1rem;
+}
+/* -------------sites region  */
+.sites {
+  display: flex;
+  margin-bottom: 10rem;
+}
+
+.sites__article {
+  width: 50%;
+  padding: 0 5rem 0 0;
+}
+
+.sites__article-headline {
+  font-size: 2rem;
+  margin: 0 0 0.8rem 0;
+}
+
+.sites__article-text {
+  color: var(--subtle-text-color);
+  text-shadow: 1px 1px 1px rgba(181, 181, 181, 0.812);
+  margin-bottom: 2.2rem;
+}
+
+.sites__article-btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: var(--custom-color);
+  padding: 0.8rem 4rem;
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.sites__section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sites__section {
+  display: flex;
+}
+
+.sites__place-image {
+  width: 12rem;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+}
+
+.sites__place-headline {
+  margin: 0.8rem 0;
+}
+
+.sites__place-text {
+  font-size: 0.8rem;
+  color: var(--subtle-text-color);
+  text-shadow: 1px 1px 3px rgb(181, 181, 181);
+  margin-bottom: 0.7rem;
+}
+
+.sites__place-btn {
+  border: none;
+  background: none;
+  color: var(--custom-color);
+  font-weight: bold;
+}
+
+/* ------------advantages region  */
+.advantages {
+  margin-bottom: 10rem;
+}
+.advantages__section {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.advantage__image {
+  margin-bottom: 4rem;
+}
+
+.advantage__headline {
+  height: 5rem;
+}
+
+.advantage__text {
+  color: var(--subtle-text-color);
+  font-size: 0.8rem;
+  text-shadow: 1px 1px 3px rgb(181, 181, 181);
+}
+
+/* -----------footer region  */
